@@ -1,0 +1,927 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15E7BC33-2974-42CD-A186-2BC39631AAE1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PEscritorio</RootNamespace>
+    <AssemblyName>PEscritorio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BDPinturaJuarezDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPinturaJuarezDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDPinturaJuarezDataSet1.cs">
+      <DependentUpon>BDPinturaJuarezDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDPinturaJuarezDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPinturaJuarezDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDPinturaJuarezDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPinturaJuarezDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDPinturaJuarezDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPinturaJuarezDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarContra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarContra.Designer.cs">
+      <DependentUpon>CambiarContra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaldoInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaldoInicial.Designer.cs">
+      <DependentUpon>FormSaldoInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMJOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMJOS.Designer.cs">
+      <DependentUpon>FRMJOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecuperarContraseña.Designer.cs">
+      <DependentUpon>RecuperarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ticketbueno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ticketbueno.Designer.cs">
+      <DependentUpon>ticketbueno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Balance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Balance.Designer.cs">
+      <DependentUpon>Balance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Cargando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Cargando.Designer.cs">
+      <DependentUpon>Cargando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\CBalance.Designer.cs">
+      <DependentUpon>CBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\CClientes.Designer.cs">
+      <DependentUpon>CClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\CCompras.Designer.cs">
+      <DependentUpon>CCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CCorte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\CCorte.Designer.cs">
+      <DependentUpon>CCorte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\CMateriales.Designer.cs">
+      <DependentUpon>CMateriales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Compras.Designer.cs">
+      <DependentUpon>Compras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Corte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Corte.Designer.cs">
+      <DependentUpon>Corte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Cotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Cotizacion.Designer.cs">
+      <DependentUpon>Cotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CPintura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\CPintura.Designer.cs">
+      <DependentUpon>CPintura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\CProveedores.Designer.cs">
+      <DependentUpon>CProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\CUsuarios.Designer.cs">
+      <DependentUpon>CUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\CVentas.Designer.cs">
+      <DependentUpon>CVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\C_COMPRAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\C_COMPRAS.Designer.cs">
+      <DependentUpon>C_COMPRAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuColorTable.cs" />
+    <Compile Include="MenuRenderer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\FR_MATMASV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FR_MATMASV.Designer.cs">
+      <DependentUpon>FR_MATMASV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\F_CORTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\F_CORTE.Designer.cs">
+      <DependentUpon>F_CORTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\PRUEBA20.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\PRUEBA20.Designer.cs">
+      <DependentUpon>PRUEBA20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RClientes.Designer.cs">
+      <DependentUpon>RClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReprtesVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ReprtesVentas.Designer.cs">
+      <DependentUpon>ReprtesVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RJDropdownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vistas\RMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RMateriales.Designer.cs">
+      <DependentUpon>RMateriales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RPintura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RPintura.Designer.cs">
+      <DependentUpon>RPintura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RProveedor.Designer.cs">
+      <DependentUpon>RProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_LIJAMASVEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_LIJAMASVEN.Designer.cs">
+      <DependentUpon>RP_LIJAMASVEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_MCLIENTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_MCLIENTE.Designer.cs">
+      <DependentUpon>RP_MCLIENTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_MENSUALV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_MENSUALV.Designer.cs">
+      <DependentUpon>RP_MENSUALV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_MERCPROVM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_MERCPROVM.Designer.cs">
+      <DependentUpon>RP_MERCPROVM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_PINMARCA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_PINMARCA.Designer.cs">
+      <DependentUpon>RP_PINMARCA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_PINTURAMASV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_PINTURAMASV.Designer.cs">
+      <DependentUpon>RP_PINTURAMASV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_PROVMASCOMPRADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_PROVMASCOMPRADO.Designer.cs">
+      <DependentUpon>RP_PROVMASCOMPRADO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_TAPE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_TAPE.Designer.cs">
+      <DependentUpon>RP_TAPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_THINER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_THINER.Designer.cs">
+      <DependentUpon>RP_THINER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_TIPOPMV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_TIPOPMV.Designer.cs">
+      <DependentUpon>RP_TIPOPMV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_VENANUAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_VENANUAL.Designer.cs">
+      <DependentUpon>RP_VENANUAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RP_VENTASDIARIAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RP_VENTASDIARIAS.Designer.cs">
+      <DependentUpon>RP_VENTASDIARIAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RUsuario.Designer.cs">
+      <DependentUpon>RUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CambiarContra.resx">
+      <DependentUpon>CambiarContra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COTIZACION.rdlc" />
+    <EmbeddedResource Include="FAC1.rdlc" />
+    <EmbeddedResource Include="FACTURA.rdlc" />
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaldoInicial.resx">
+      <DependentUpon>FormSaldoInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMJOS.resx">
+      <DependentUpon>FRMJOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pinturas.rdlc" />
+    <EmbeddedResource Include="RecuperarContraseña.resx">
+      <DependentUpon>RecuperarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TICK1.rdlc" />
+    <EmbeddedResource Include="Ticket.rdlc" />
+    <EmbeddedResource Include="ticketbueno.resx">
+      <DependentUpon>ticketbueno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Balance.resx">
+      <DependentUpon>Balance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Cargando.resx">
+      <DependentUpon>Cargando.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CBalance.resx">
+      <DependentUpon>CBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CClientes.resx">
+      <DependentUpon>CClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CCompras.resx">
+      <DependentUpon>CCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CCorte.resx">
+      <DependentUpon>CCorte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CMateriales.resx">
+      <DependentUpon>CMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\COMPRA.rdlc" />
+    <EmbeddedResource Include="Vistas\Compras.resx">
+      <DependentUpon>Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CORTE.rdlc" />
+    <EmbeddedResource Include="Vistas\Corte.resx">
+      <DependentUpon>Corte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Cotizacion.resx">
+      <DependentUpon>Cotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CPintura.resx">
+      <DependentUpon>CPintura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CProveedores.resx">
+      <DependentUpon>CProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CUsuarios.resx">
+      <DependentUpon>CUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CVentas.resx">
+      <DependentUpon>CVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\C_COMPRAS.resx">
+      <DependentUpon>C_COMPRAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vistas\FR_MATMASV.resx">
+      <DependentUpon>FR_MATMASV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\F_CORTE.resx">
+      <DependentUpon>F_CORTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\MEJORCLIEN.rdlc" />
+    <EmbeddedResource Include="Vistas\PINTURAMASV.rdlc" />
+    <EmbeddedResource Include="Vistas\PRUEBA20.resx">
+      <DependentUpon>PRUEBA20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\PR_PROVMASCOMPRA.rdlc" />
+    <EmbeddedResource Include="Vistas\RClientes.resx">
+      <DependentUpon>RClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Report1.rdlc" />
+    <EmbeddedResource Include="Vistas\Report2.rdlc" />
+    <EmbeddedResource Include="Vistas\ReprtesVentas.resx">
+      <DependentUpon>ReprtesVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RMateriales.resx">
+      <DependentUpon>RMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RPintura.resx">
+      <DependentUpon>RPintura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RProveedor.resx">
+      <DependentUpon>RProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_LIJA.rdlc" />
+    <EmbeddedResource Include="Vistas\RP_LIJAMASVEN.resx">
+      <DependentUpon>RP_LIJAMASVEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_MARCAP.rdlc" />
+    <EmbeddedResource Include="Vistas\RP_MCLIENTE.resx">
+      <DependentUpon>RP_MCLIENTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_MENSUAL.rdlc" />
+    <EmbeddedResource Include="Vistas\RP_MENSUALV.resx">
+      <DependentUpon>RP_MENSUALV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_MERCPROV.rdlc" />
+    <EmbeddedResource Include="Vistas\RP_MERCPROVM.resx">
+      <DependentUpon>RP_MERCPROVM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_PINMARCA.resx">
+      <DependentUpon>RP_PINMARCA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_PINTURAMASV.resx">
+      <DependentUpon>RP_PINTURAMASV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_PROVMASCOMPRADO.resx">
+      <DependentUpon>RP_PROVMASCOMPRADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_SEMANAL.rdlc" />
+    <EmbeddedResource Include="Vistas\RP_TAPE.resx">
+      <DependentUpon>RP_TAPE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_TAPErdlc.rdlc" />
+    <EmbeddedResource Include="Vistas\RP_THINER.rdlc" />
+    <EmbeddedResource Include="Vistas\RP_THINER.resx">
+      <DependentUpon>RP_THINER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_TIPOPMV.resx">
+      <DependentUpon>RP_TIPOPMV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_VDIA.rdlc" />
+    <EmbeddedResource Include="Vistas\RP_VENANUAL.resx">
+      <DependentUpon>RP_VENANUAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RP_VENTAANUAL.rdlc" />
+    <EmbeddedResource Include="Vistas\RP_VENTASDIARIAS.resx">
+      <DependentUpon>RP_VENTASDIARIAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RUsuario.resx">
+      <DependentUpon>RUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BDPinturaJuarezDataSet.xsc">
+      <DependentUpon>BDPinturaJuarezDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDPinturaJuarezDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDPinturaJuarezDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDPinturaJuarezDataSet.xss">
+      <DependentUpon>BDPinturaJuarezDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDPinturaJuarezDataSet1.xsc">
+      <DependentUpon>BDPinturaJuarezDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BDPinturaJuarezDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDPinturaJuarezDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDPinturaJuarezDataSet1.xss">
+      <DependentUpon>BDPinturaJuarezDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BDPinturaJuarezDataSet2.xsc">
+      <DependentUpon>BDPinturaJuarezDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BDPinturaJuarezDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDPinturaJuarezDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDPinturaJuarezDataSet2.xss">
+      <DependentUpon>BDPinturaJuarezDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BDPinturaJuarezDataSet3.xsc">
+      <DependentUpon>BDPinturaJuarezDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BDPinturaJuarezDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDPinturaJuarezDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDPinturaJuarezDataSet3.xss">
+      <DependentUpon>BDPinturaJuarezDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-inventario-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAtalogo panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-agregar-a-carrito-de-compras-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-producto-nuevo-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menú-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cortar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-verificar-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-factura-pagada-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sin títulowfd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gdvbfgbn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COMPRAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CATALOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CATALOGO1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CORTE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FACTURA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VENTAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PANTALLA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PANTALLAs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SALIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REGISTRO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menú-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuario-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CProveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CClientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CVentas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RPINTURA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RMateriales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CCompras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CVentas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CInventario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CBalace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CCorte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REGISTRO panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-agregar-a-carrito-de-VENTAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-casilla-de-verificación-marcada-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-búsqueda-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-factura-pagada-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cola-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-encuentra-hombre-usuario-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eliminar-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reemplazar-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-verificar-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-conseguir-dinero-en-efectivo-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-encuentra-hombre-usuario-402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-búsqueda-402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-billetes-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reemplazar-402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eliminar-402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gdvbfgbn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-entrar-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tarea-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-proveedor-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendario-30-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-agregar-a-carrito-de-compras-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tarea-502.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-situación-del-hombre-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-amo-de-llaves-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendario-30-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-signo-de-interrogación-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-añadir-entrada-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-verificar-402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-grocery-shelf-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-escáner-de-código-de-barras-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-marca-de-bolso-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logística-de-entrega-de-paquetes-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-how-many-quest-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-promedio-2-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tarjeta-de-garantía-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-estación-de-policía-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-situación-del-hombre-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-teléfono-celular-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-signing-a-document-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pregunta-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-postal-con-código-de-barras-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edificios-de-la-ciudad-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bloquear-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-presentación-de-voz-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-color-de-relleno-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReVentas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REMaterial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RePintura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReClientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-03-06 at 12.09.34 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wawww.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zzzzzzzzzzz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zReportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-agregar-a-carrito-de-VENTAS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-imprimir-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo de carga1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{7d2ca904-945e-4ead-bd3e-50fba2ee6514}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{cc58f85a-a48e-49e8-ab7c-4bf5d9ef6b13}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-libro-mayor-50.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
